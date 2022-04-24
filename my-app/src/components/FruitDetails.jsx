@@ -37,6 +37,7 @@ const FruitDetails = (props) => {
                         <h2>Calories: {fruitDetails.nutritions.calories}</h2>
                         <h2>Sugar: {fruitDetails.nutritions.sugar}</h2>
                         </div>
+                        <button onClick={props.goBack}>Go Back</button>
                 </div>
             ) : (
                 <h4>Loading</h4>

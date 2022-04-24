@@ -12,6 +12,9 @@ const App = () => {
 const selectFruit = (name) => {
     setSelectedFruit(name)
   }
+  const goBack = () => {
+    setSelectedFruit(null)
+  }
 
   useEffect(() => {
     const getFruit = async () => {
@@ -26,7 +29,7 @@ return (
   <div>
     <h1 className='title'>Wonderful Fruit</h1>
     {selectedFruit ? (
-      <FruitDetails selectedFruit={selectedFruit}/>
+      <FruitDetails selectedFruit={selectedFruit} goBack={goBack}/>
     ) : (
       <AllFruit fruit={fruit} selectFruit={selectFruit}/>
     )}
