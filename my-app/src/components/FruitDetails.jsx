@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { BASE_URL } from '../globals'
-import Nutrition from './Nutrition'
+// import Nutrition from './Nutrition'
 
 const FruitDetails = (props) => {
     const [fruitDetails, setFruitDetails] = useState(null)
