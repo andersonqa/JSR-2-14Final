@@ -10,7 +10,6 @@ const Nutrition = (props) => {
     useEffect (() => {
         const getNutritionDetails = async () => {
             const response = await axios.get (`${BASE_URL}${props.selectedFruit}`)
-            // const imgResponse = await axios.get (`https://imsea.herokuapp.com/api/1q?${props.selectedFruit}`)
             setNutrition(response.data)
         }
         getNutritionDetails()

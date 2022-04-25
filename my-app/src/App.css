@@ -1,20 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Source+Sans+Pro:wght@200&display=swap');
-
-body {
-  background-color: #ffffff;
-  font-family:'Poppins', sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@100&family=Source+Sans+Pro:wght@200&display=swap');
 
 button {
-  padding: 0.5em 1.2em;
+  padding: 0.5em 0.5em;
   border-radius: 50px;
+  margin-bottom: 0.5em;
   border: none;
   cursor: pointer;
   background-color: #ad92d6;
   transition: all 0.2s ease;
   font-weight: 700;
-  font-family:"Source Sans Pro", Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 button:hover {
@@ -23,7 +20,7 @@ button:hover {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, minmax(25px, 1fr));
   grid-gap: 5em;
   padding: 0.5em;
 }
@@ -35,6 +32,7 @@ button:hover {
   text-align: center;
   justify-content: space-between;
   background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* .card button {
@@ -48,17 +46,18 @@ button:hover {
 .card,
 .content {
   color: black;
-  
+  font-family: 'Poppins', sans-serif;
 }
 
 .details .content {
   /* padding: 1em 0; */
   text-align: center;
-  font-family:"Source Sans Pro", Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .details button {
   margin: 1em;
+  font-family: 'Poppins', sans-serif;
 }
 
 .details img {
@@ -69,11 +68,12 @@ button:hover {
   color: black;
   text-align: center;
   margin-top: 4em;
+  font-family: 'Poppins', sans-serif;
 }
 
 .photo {
-  width: 500px;
-  height: 500px;
+  width: 50%;
+  height: 50%;
   align-content: center;
-  margin: 100;
+  margin: 100 100 0 0 ;
 }
