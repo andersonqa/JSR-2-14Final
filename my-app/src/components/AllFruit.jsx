@@ -6,8 +6,7 @@ const AllFruit = (props) => {
                 props.fruit.map((fruit) => (
                     <div key={fruit.name} className='card'>
                     <h3>{fruit.name}</h3>
-                    <button onClick={()=> props.selectFruit(fruit.name)}>Taxonomy</button>
-                    <button onClick={()=> props.selectNutrition(fruit.name)}>Nutrition</button>
+                    <button onClick={()=> props.selectFruit(fruit.name)}>More</button>
                     </div>
                 ))
             }

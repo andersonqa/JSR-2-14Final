@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { BASE_URL } from '../globals'
+import { BASE_URL, API_KEY } from '../globals'
 // import Nutrition from './Nutrition'
 
 const FruitDetails = (props) => {
@@ -17,8 +17,9 @@ const FruitDetails = (props) => {
     }, [props.selectedFruit])
 
         const getImage = async () => {
-            const imgResponse = await axios.get (`https://imsea.herokuapp.com/api/1?q=${props.selectedFruit}`)
-            setFruitImage(imgResponse.data.results[0])
+            const imgResponse = await axios.get('https://api.unsplash.com/photos/random/?client_id=j3RR6Cz3D1jpI66zyMOB0sWQQuTT8kZru1IoOIl0ALM')
+            console.log(imgResponse)
+            setFruitImage(imgResponse)
         }
         getImage()
     
@@ -28,6 +29,7 @@ const FruitDetails = (props) => {
                 <div className='details'>
                     <div className='card'>
                     <img className='photo' src={fruitImage} alt='Selected Fruit'/>
+                        <h1>{fruitDetails.name}</h1>
                         <h2>Family: {fruitDetails.family}</h2>
                         <h2>Genus: {fruitDetails.genus}</h2>
                         <h2>Order: {fruitDetails.order}</h2>

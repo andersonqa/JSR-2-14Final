@@ -43,3 +43,5 @@ return (
   )
   }
 export default App
+
+// selectedNutrition ? (<Nutrition selectFruit={selectedFruit}/>
