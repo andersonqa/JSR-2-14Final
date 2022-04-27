@@ -11,16 +11,23 @@ const FruitDetails = (props) => {
         const getDetails = async () => {
             const response = await axios.get (`${BASE_URL}${props.selectedFruit}`)
             setFruitDetails(response.data)
+            setFruitImage(response.data.name)
         }
         getDetails()
     }, [props.selectedFruit])
 
-        const getImage = async () => {
-            const imgResponse = await axios.get('https://api.unsplash.com/photos/random/?client_id=j3RR6Cz3D1jpI66zyMOB0sWQQuTT8kZru1IoOIl0ALM')
-            console.log(imgResponse)
-            setFruitImage(imgResponse)
-        }
-        getImage()
+        // const getImage = async () => {
+        //     const imgResponse = await axios.get('https://api.unsplash.com/photos/random', {
+        //         headers: {
+        //             'Authorization': 'Client-ID j3RR6Cz3D1jpI66zyMOB0sWQQuTT8kZru1IoOIl0ALM',
+        //             'Query': 'Banana',
+        //             'Count': 1
+        //           } 
+        //     })
+        //     console.log(imgResponse)
+        //     setFruitImage(imgResponse)
+        // }
+        // getImage()
     
     return (
         <div>
@@ -28,7 +35,10 @@ const FruitDetails = (props) => {
                 <div className='details'>
                     <div className='card'>
                     <h1>{fruitDetails.name}</h1>
-                    <img className='photo' src={fruitImage} alt='Selected Fruit'/>
+                    <div className='imageDiv'>
+                    <img src={`https://source.unsplash.com/random/300×300/?${fruitDetails.name}/`} alt = 'Fruit'/>
+                    </div>
+                    {/* <img className='photo' src={fruitImage} alt='Selected Fruit'/> */}
                             <h2>Taxonomy</h2>
                             <p>Family: {fruitDetails.family}</p>
                             <p>Genus: {fruitDetails.genus}</p>
