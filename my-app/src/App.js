@@ -4,20 +4,14 @@ import axios from 'axios'
 import { BASE_URL } from './globals'
 import AllFruit from './components/AllFruit'
 import FruitDetails from './components/FruitDetails'
-// import Nutrition from './components/Nutrition'
 
 const App = () => {
     const [fruit, setFruit] = useState ([])
     const [selectedFruit, setSelectedFruit] = useState(null)
-    // const [selectedNutrition, setSelectedNutrition] = useState(null)
 
 const selectFruit = (name) => {
     setSelectedFruit(name)
   }
-
-// const selectNutrition = (name) => {
-//     setSelectedNutrition (name)
-// }
 
   const goBack = () => {
     setSelectedFruit(null)
@@ -43,5 +37,3 @@ return (
   )
   }
 export default App
-
-// selectedNutrition ? (<Nutrition selectFruit={selectedFruit}/>

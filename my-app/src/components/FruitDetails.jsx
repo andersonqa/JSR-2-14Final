@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { BASE_URL, API_KEY } from '../globals'
-// import Nutrition from './Nutrition'
 
 const FruitDetails = (props) => {
     const [fruitDetails, setFruitDetails] = useState(null)
@@ -30,9 +29,6 @@ const FruitDetails = (props) => {
                     <div className='card'>
                     <h1>{fruitDetails.name}</h1>
                     <img className='photo' src={fruitImage} alt='Selected Fruit'/>
-                        {/* <h2>Family: {fruitDetails.family}</h2>
-                        <h2>Genus: {fruitDetails.genus}</h2>
-                        <h2>Order: {fruitDetails.order}</h2> */}
                             <h2>Taxonomy</h2>
                             <p>Family: {fruitDetails.family}</p>
                             <p>Genus: {fruitDetails.genus}</p>
@@ -43,7 +39,7 @@ const FruitDetails = (props) => {
                         <p>Sugar: {fruitDetails.nutritions.calories}</p>
                         <p>{fruitDetails.nutritions.sugar}</p>
                         </div>
-                        <button onClick={props.goBack}>Go Back</button>
+                        <button onClick={props.goBack}>Return</button>
                 </div>
             ) : (
                 <h4>Loading</h4>
