@@ -20,7 +20,7 @@ const FruitDetails = (props) => {
                     <div className='card'>
                     <h1>{fruitDetails.name}</h1>
                     <div className='imageDiv'>
-                    <img src={`https://source.unsplash.com/random/300×300/?${fruitDetails.name}/`} alt = 'Fruit'/>
+                    <img src={`https://source.unsplash.com/random/300×300/?${fruitDetails.name}+'fruit'/`} alt = 'Fruit'/>
                     </div>
                             <h2>Taxonomy</h2>
                             <p>Family : {fruitDetails.family}</p>
