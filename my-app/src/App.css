@@ -2,6 +2,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Source+Sans+Pro:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@100&family=Source+Sans+Pro:wght@200&display=swap');
 
+.title {
+  color: black;
+  text-align: center;
+  margin-top: 4em;
+  font-family: 'Poppins', sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(25px, 1fr));
+  grid-gap: 5em;
+  padding: 0.5em;
+}
+
+.photo {
+  width: 50%;
+  height: 50%;
+  align-content: center;
+  margin: 100 100 0 0 ;
+}
+
 button {
   padding: 0.5em 0.5em;
   border-radius: 50px;
@@ -18,13 +39,6 @@ button:hover {
   background-color: coral;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(25px, 1fr));
-  grid-gap: 5em;
-  padding: 0.5em;
-}
-
 .card {
   border-radius: 4px;
   display: flex;
@@ -35,9 +49,9 @@ button:hover {
   font-family: 'Poppins', sans-serif;
 }
 
-/* .card button {
+.card button {
   border-radius: 10px 10px 10px 10px;
-} */
+}
 
 .card img {
   border-radius: 10px 10px 0 0;
@@ -64,16 +78,3 @@ button:hover {
   width: 100%;
 }
 
-.title {
-  color: black;
-  text-align: center;
-  margin-top: 4em;
-  font-family: 'Poppins', sans-serif;
-}
-
-.photo {
-  width: 50%;
-  height: 50%;
-  align-content: center;
-  margin: 100 100 0 0 ;
-}
