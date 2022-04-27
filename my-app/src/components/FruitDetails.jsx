@@ -4,14 +4,13 @@ import { BASE_URL, API_KEY } from '../globals'
 
 const FruitDetails = (props) => {
     const [fruitDetails, setFruitDetails] = useState(null)
-    const [fruitImage, setFruitImage] = useState(null)
+    // const [fruitImage, setFruitImage] = useState(null)
 
 
     useEffect (() => {
         const getDetails = async () => {
             const response = await axios.get (`${BASE_URL}${props.selectedFruit}`)
             setFruitDetails(response.data)
-            setFruitImage(response.data.name)
         }
         getDetails()
     }, [props.selectedFruit])
@@ -36,18 +35,19 @@ const FruitDetails = (props) => {
                     <div className='card'>
                     <h1>{fruitDetails.name}</h1>
                     <div className='imageDiv'>
-                    <img src={`https://source.unsplash.com/random/300×300/?${fruitDetails.name}/`} alt = 'Fruit'/>
+                    <img src={`https://source.unsplash.com/random/300×300/?${fruitDetails.name}+'fruit'/`} alt = 'Fruit'/>
                     </div>
                     {/* <img className='photo' src={fruitImage} alt='Selected Fruit'/> */}
                             <h2>Taxonomy</h2>
-                            <p>Family: {fruitDetails.family}</p>
-                            <p>Genus: {fruitDetails.genus}</p>
-                            <p>Order: {fruitDetails.order}</p>
+                            <p>Family : {fruitDetails.family}</p>
+                            <p>Genus : {fruitDetails.genus}</p>
+                            <p>Order : {fruitDetails.order}</p>
                             <h2>Nutrition Information</h2>
-                            <p>Protein: {fruitDetails.nutritions.protein}</p>
-                        <p>Fat: {fruitDetails.nutritions.fat}</p>
-                        <p>Sugar: {fruitDetails.nutritions.calories}</p>
-                        <p>{fruitDetails.nutritions.sugar}</p>
+                         <p>Carbohydrates : {fruitDetails.nutritions.carbohydrates}</p>   
+                        <p>Protein : {fruitDetails.nutritions.protein}</p>
+                        <p>Fat : {fruitDetails.nutritions.fat}</p>
+                        <p>Calories : {fruitDetails.nutritions.calories}</p>
+                        <p>Sugar : {fruitDetails.nutritions.sugar}</p>
                         </div>
                         <button onClick={props.goBack}>Return</button>
                 </div>

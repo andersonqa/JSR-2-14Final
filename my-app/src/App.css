@@ -54,6 +54,11 @@ button:hover {
 .content {
   color: black;
   font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+.details {
+  height:100%;
 }
 
 .details .content {
