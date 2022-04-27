@@ -1,4 +1,4 @@
-# JSR-2-14Final
+# JSR-2-14Final Project: Wonderful Fruit
 
 This project uses the FruityVice API (https://www.fruityvice.com/) to display taxonomic and nutritional information about various fruits. 
 
