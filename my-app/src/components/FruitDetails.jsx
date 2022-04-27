@@ -28,14 +28,20 @@ const FruitDetails = (props) => {
             {fruitDetails ? (
                 <div className='details'>
                     <div className='card'>
+                    <h1>{fruitDetails.name}</h1>
                     <img className='photo' src={fruitImage} alt='Selected Fruit'/>
-                        <h1>{fruitDetails.name}</h1>
                         {/* <h2>Family: {fruitDetails.family}</h2>
                         <h2>Genus: {fruitDetails.genus}</h2>
                         <h2>Order: {fruitDetails.order}</h2> */}
+                            <h2>Taxonomy</h2>
                             <p>Family: {fruitDetails.family}</p>
                             <p>Genus: {fruitDetails.genus}</p>
                             <p>Order: {fruitDetails.order}</p>
+                            <h2>Nutrition Information</h2>
+                            <p>Protein: {fruitDetails.nutritions.protein}</p>
+                        <p>Fat: {fruitDetails.nutritions.fat}</p>
+                        <p>Sugar: {fruitDetails.nutritions.calories}</p>
+                        <p>{fruitDetails.nutritions.sugar}</p>
                         </div>
                         <button onClick={props.goBack}>Go Back</button>
                 </div>
